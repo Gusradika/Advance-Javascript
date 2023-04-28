@@ -53,3 +53,76 @@ console.table(jumlahHuruf2); // Print console, dengan tampilan Table
 // Jika return Object
 let jumlahHuruf3 = mhs.map((x) => ({ nama: x, jmlhHuruf: x.length }));
 console.table(jumlahHuruf3); // Print console, dengan tampilan Table
+
+//
+//
+// THIS pada arrow function
+//
+//
+//
+
+// Constructor function
+// Constructor tidak dapat di deklarasikan menjadi Arrow Function
+
+const Mahasiswa = function () {
+  this.nama = "Aditya Kesuma";
+  this.umur = 22;
+  this.sayHello = () => {
+    console.log(`Halo, nama saya ${this.nama}, dan saya ${this.umur} tahun.`);
+  };
+};
+
+const mhs4 = new Mahasiswa();
+
+// Object literal
+// Arrow function tidak memiliki konsep this
+const mhs5 = {
+  nama: "Aditya Kesuma",
+  umur: 22,
+  sayHello: () => {
+    console.log(`Halo, nama saya ${this.nama}, dan saya ${this.umur} tahun.`);
+  },
+};
+
+const Mahasiswa2 = function () {
+  this.nama = "Aditya Kesuma";
+  this.umur = "22";
+  this.sayHello = function () {
+    console.log(`Halo, nama saya ${this.nama}, dan saya ${this.umur} tahun.`);
+  };
+
+  // Konsep Function memiliki this maka jika ini di jalankan maka yang di ambil adalah window
+  // setInterval(function () {
+  //   console.log(this.umur++);
+  // }, 500);
+
+  // kita harus menggunakan arrow function untuk mengambil constructor
+  setInterval(() => {
+    console.log(this.umur++);
+  }, 500);
+};
+
+// Contoh Real
+// Contoh Real
+// Contoh Real
+// Contoh Real
+
+// SetInterval : memberikan interval waktu
+// SetTimeout : memberikan timeout waktu
+
+const box = document.querySelector(".box");
+
+box.addEventListener("click", function () {
+  let satu = "size";
+  let dua = "caption";
+
+  if (this.classList.contains(satu)) {
+    [satu, dua] = [dua, satu];
+  }
+
+  console.log(this);
+  this.classList.toggle("size");
+  setTimeout(() => {
+    this.classList.toggle("caption");
+  }, 600);
+});
