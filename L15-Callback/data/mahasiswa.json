@@ -1,0 +1,23 @@
+[
+  {
+    "nama": "Aditya",
+    "nim": "21410100039",
+    "email": "Aditya@gmail.com",
+    "jurusan": "S1 Sistem Informasi",
+    "doswal": 1
+  },
+  {
+    "nama": "Aditya2",
+    "nim": "21410100039",
+    "email": "Aditya@gmail.com",
+    "jurusan": "S1 Sistem Informasi",
+    "doswal": 2
+  },
+  {
+    "nama": "Aditya",
+    "nim": "21410100039",
+    "email": "Aditya@gmail.com",
+    "jurusan": "S1 Sistem Informasi",
+    "doswal": 3
+  }
+]

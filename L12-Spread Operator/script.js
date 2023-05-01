@@ -35,3 +35,5 @@ const mhs4 = [...mhs1].map((x) => x.textContent);
 console.log(mhs4);
 
 // SPREAD operator memungkinkan untuk membuat animasi seperti Hover setiap huruf untuk di berikan attribute css
+// dengan cara memecahnya lalu lakukan mapping, isi dengan span
+// lalu tambahkan class nya
